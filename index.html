@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blockchain + IoT -> (PGCOMP-UFBA-2021.2)</title>
+
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+
+<body class="container">
+
+  <h1 class="page-header">Workshop Blockchain + IoT -> (PGCOMP-UFBA-2021.2)</h1>
+
+  <div class="row">
+    <div>
+      <h3 class="sub-header">Set Endereço IoT (Sensor e Termostato)</h3>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <table>
+            <tr>
+              <td><label for="newInfoAddressSensor">Info (sensor):</label> </td>
+              <td>
+                <input class="form-control" id="newInfoAddressSensor">
+              </td>
+            </tr>
+            <tr>
+              <td><label for="newInfoTerm">Info (termostato):</label> </td>
+              <td>
+                <input class="form-control" id="newInfoAddressTerm">
+              </td>
+            </tr>
+          </table>
+        </div>
+        <a href="#" onclick="registerSetAddressIot()" class="btn btn-primary">Enviar</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h3 class="sub-header">Set Atualizar Temperatura</h3>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <table>
+            <tr>
+              <td><label for="newInfoTemp">Info:</label> </td>
+              <td>
+                <input class="form-control" id="newInfoTemp">
+              </td>
+            </tr>
+          </table>
+        </div>
+        <a href="#" onclick="registerSetTemp()" class="btn btn-primary">Enviar</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h3 class="sub-header">Get Temperatura</h3>
+      <form class="form-inline" role="form">
+        <a href="#" onclick="registerGetTemp()" class="btn btn-primary">Get</a>
+        <div class="form-group">
+          <table>
+            <tr>
+              <td>Info:</td>
+              <td>
+                <label id="lastInfoTemp">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h3 class="sub-header">Get Endereço IoT</h3>
+      <form class="form-inline" role="form">
+        <a href="#" onclick="registerGetAddressIot()" class="btn btn-primary">Get</a>
+        <div class="form-group">
+          <table>
+            <tr>
+              <td>Info:</td>
+              <td>
+                <label id="lastInfoAddressIot">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
